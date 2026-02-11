@@ -41,7 +41,15 @@ On Windows: venv\Scripts\activate
 3. Install dependencies:
 pip install -r requirements.txt
 
+4. Setup an HTTP Reverse Proxy to listen on localhost:8080
+For Caddy:
+cat /etc/caddy/Caddyfile
+example.com {
+	reverse_proxy * 127.0.0.1:8080
+}
+
 4. Run the Flask app:
-flask run
+This script should never exit (detach the session for production use).
+./run.sh
 ---
 
