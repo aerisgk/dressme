@@ -63,6 +63,12 @@ class UploadForm(FlaskForm):
     )
     submit = SubmitField("Upload")
 
+# --- favicon ---
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
+
 # --- Route to serve uploaded files ---
 @app.route('/uploads/<filename>')
 def get_file(filename):    
