@@ -1,9 +1,8 @@
-# CSC 3380 – Dress Me
+# Dress Me
 
-**Author:** Gabriel Kleinschmidt, Aeris Kelleher, Isma Swati, Timothy Posley, Leigh Jasmine Metran, Tyler
-**Course:** CSC 3380 – Object-Oriented Design  
-**Instructor:** Daniel Donze
-**Date:** 10/8/25
+**Authors:** Aeris Kelleher, Gabriel Kleinschmidt, Leigh Jasmine Metran, Cam Shortt, Isma Swati
+
+A project by Crane7 Software.
 
 ---
 
@@ -30,18 +29,39 @@ Dress Me is a **personal digital closet app** that allows users to upload and or
 
 ---
 
-### How to Run
-1. Clone the repository: https://github.com/leighmetran/3380-project-v2.git
+### How to Setup
 
-2. Create a virtual environment:
-python -m venv venv
-source venv/bin/activate 
+#### Unix
+1. Clone the repo:
+```
+$ git clone https://github.com/aerisgk/dressmei
+```
+
+2. Create a virtual environment (optional, but recommended):
+```
+$ python -m venv venv
+$ source venv/bin/activate 
+```
 On Windows: venv\Scripts\activate
 
 3. Install dependencies:
-pip install -r requirements.txt
+```
+$ pip install -r requirements.txt
+```
 
-4. Run the Flask app:
-flask run
----
+#### Windows
+Same as Unix, except:
+
+2. Create a virtual environment (optional, but recommended):
+```
+C:> python -m venv venv
+C:> venv\Scripts\activate
+```
+
+
+### How to Run
+
+```
+$ flask run
+```
 
