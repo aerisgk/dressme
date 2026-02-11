@@ -10,6 +10,7 @@ This app allows users to:
 
 """
 
+"""
 from flask import Flask, render_template, send_from_directory, url_for, redirect, request, flash, make_response
 from flask_uploads import UploadSet, IMAGES, configure_uploads
 from flask_wtf import FlaskForm
@@ -22,7 +23,19 @@ from models import db, ClothingItem, User
 import os
 import json
 import random
+"""
+import toga
+from toga.style.pack import COLUMN, ROW
 
+class DressMe(toga.App):
+    def startup(self):
+        box = toga.Box()
+
+        self.main_window = toga.MainWindow(title=self.formal_name)
+        self.main_window.content = box
+        self.main_window.show()
+
+"""
 app = Flask(__name__)
 app.config['SECRET_KEY']= 'asklsh'
 app.config['UPLOADED_PHOTOS_DEST'] = 'uploads'
@@ -198,8 +211,16 @@ if __name__ == '__main__':
     with app.app_context():
         db.create_all()  # create tables if they don't exist
     app.run(debug=True)
+"""
 
+def main():
+    return DressMe()
 
+# --- New version with beeware ---
+if __name__ == '__main__':
+    main()
+
+"""
 @app.route("/register", methods=["GET", "POST"])
 def register():
     theme = request.cookies.get("theme", "light")
@@ -297,4 +318,4 @@ def generate_outfit():
         selected_shoes_id=shoe.id,
         theme=theme
     )
-
+"""
