@@ -69,6 +69,12 @@ def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
+# --- apple is annoying and doesn't use the favicon ---
+@app.route('/apple-touch-icon.png')
+def apple_icon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'dressme-512.png', mimetype='image/png')
+
 # --- Route to serve uploaded files ---
 @app.route('/uploads/<filename>')
 def get_file(filename):    
