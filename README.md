@@ -36,7 +36,7 @@ Dress Me is a **personal digital closet app** that allows users to upload and or
 $ git clone https://github.com/aerisgk/dressme
 ```
 
-2. Create a virtual environment (optional, but recommended):
+2. Create a virtual environment (optional, but highly recommended):
 ```
 $ python -m venv venv
 $ source venv/bin/activate 
@@ -48,8 +48,8 @@ $ pip install -r requirements.txt
 ```
 
 4. Setup an HTTP Reverse Proxy to listen on localhost:8080
-For Caddy:
 ```
+$ # For Caddy:
 $ cat /etc/caddy/Caddyfile
 example.com {
 	reverse_proxy * 127.0.0.1:8080
