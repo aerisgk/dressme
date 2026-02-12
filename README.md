@@ -33,7 +33,7 @@ Dress Me is a **personal digital closet app** that allows users to upload and or
 
 1. Clone the repo:
 ```
-$ git clone https://github.com/aerisgk/dressmei
+$ git clone https://github.com/aerisgk/dressme
 ```
 
 2. Create a virtual environment (optional, but recommended):
@@ -49,13 +49,17 @@ $ pip install -r requirements.txt
 
 4. Setup an HTTP Reverse Proxy to listen on localhost:8080
 For Caddy:
-cat /etc/caddy/Caddyfile
+```
+$ cat /etc/caddy/Caddyfile
 example.com {
 	reverse_proxy * 127.0.0.1:8080
 }
+```
 
 5. Run the Flask app:
 This script should never exit (detach the session for production use).
-sh deploy.sh
+```
+$ sh deploy.sh
+```
 ---
 
