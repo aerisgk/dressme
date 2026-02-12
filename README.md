@@ -49,19 +49,15 @@ On Windows: venv\Scripts\activate
 $ pip install -r requirements.txt
 ```
 
-#### Windows
-Same as Unix, except:
+4. Setup an HTTP Reverse Proxy to listen on localhost:8080
+For Caddy:
+cat /etc/caddy/Caddyfile
+example.com {
+	reverse_proxy * 127.0.0.1:8080
+}
 
-2. Create a virtual environment (optional, but recommended):
-```
-C:> python -m venv venv
-C:> venv\Scripts\activate
-```
-
-
-### How to Run
-
-```
-$ flask run
-```
+5. Run the Flask app:
+This script should never exit (detach the session for production use).
+./run.sh
+---
 
