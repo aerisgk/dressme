@@ -11,3 +11,4 @@ flask-wtf
 flask-login
 flask-sqlalchemy
 flask-Reuploaded
+waitress

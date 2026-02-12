@@ -4,6 +4,15 @@ padding: 0;
 box-sizing: border-box;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+div {
+    flex-wrap: wrap;
+}
+
 :root {
     --bg: #ffffff;
     --text: #000000;
