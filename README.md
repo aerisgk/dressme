@@ -31,7 +31,6 @@ Dress Me is a **personal digital closet app** that allows users to upload and or
 
 ### How to Setup
 
-#### Unix
 1. Clone the repo:
 ```
 $ git clone https://github.com/aerisgk/dressmei
@@ -42,7 +41,6 @@ $ git clone https://github.com/aerisgk/dressmei
 $ python -m venv venv
 $ source venv/bin/activate 
 ```
-On Windows: venv\Scripts\activate
 
 3. Install dependencies:
 ```
@@ -58,6 +56,6 @@ example.com {
 
 5. Run the Flask app:
 This script should never exit (detach the session for production use).
-./run.sh
+sh deploy.sh
 ---
 
