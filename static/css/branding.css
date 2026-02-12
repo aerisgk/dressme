@@ -9,6 +9,11 @@ html, body {
     overflow-x: hidden;
 }
 
+div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 :root {
     --bg: #ffffff;
     --text: #000000;
